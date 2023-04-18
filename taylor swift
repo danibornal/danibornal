@@ -1,0 +1,29 @@
+# Cria um dicionário com os álbuns da Taylor Swift e as emoções associadas a cada um
+albuns_taylor_swift = {
+    "Taylor Swift": ["nostálgico", "jovial", "esperançoso"],
+    "Fearless": ["romântico", "esperançoso", "alegre"],
+    "Speak Now": ["confiante", "apaixonado", "inspirado"],
+    "Red": ["apaixonado", "angustiado", "reflexivo"],
+    "1989": ["ousado", "energético", "eufórico"],
+    "Reputation": ["irreverente", "determinado", "vingativo"],
+    "Lover": ["apaixonado", "feliz", "suave"],
+    "Folklore": ["melancólico", "reflexivo", "atmosférico"],
+    "Evermore": ["melancólico", "contemplativo", "calmo"],
+    "Midnights": ["pensativo", "cansado", "triste"]
+}
+
+# Função que retorna um álbum da Taylor Swift com base em uma emoção
+def escolher_album(emocao):
+    for album, emocoes in albuns_taylor_swift.items():
+        if emocao in emocoes:
+            return album
+    return "Não foi possível encontrar um álbum adequado para a emoção"
+
+# Pede ao usuário que entre sua emoção atual
+emocao = input("Qual é a sua emoção agora? ")
+
+# Chama a função para encontrar um álbum correspondente à emoção
+album = escolher_album(emocao)
+
+# Exibe o álbum correspondente
+print("O álbum da Taylor Swift que melhor combina com sua emoção é: ", album)
